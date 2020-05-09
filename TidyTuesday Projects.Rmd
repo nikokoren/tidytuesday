@@ -10,7 +10,7 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
-install.packages("tidyverse")
+library("tidyverse")
 
 # 2020-05_05
 # Animal Crossing Data
@@ -24,6 +24,6 @@ villagers <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/
 
 
 ```{r}
-
+items
 ```
 

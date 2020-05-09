@@ -9,31 +9,28 @@ output:
 
 
 
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
 
 ```r
-summary(cars)
+items
 ```
 
 ```
-##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00
+## # A tibble: 4,565 x 16
+##    num_id id    name  category orderable sell_value sell_currency buy_value
+##     <dbl> <chr> <chr> <chr>    <lgl>          <dbl> <chr>             <dbl>
+##  1     12 3d-g… 3D G… Accesso… NA               122 bells               490
+##  2     14 a-tee A Tee Tops     NA               140 bells               560
+##  3     17 abst… Abst… Wallpap… TRUE             390 bells              1560
+##  4     19 acad… Acad… Dresses  NA               520 bells              2080
+##  5     20 acan… Acan… Fossils  FALSE           2000 bells                NA
+##  6     21 acce… Acce… Furnitu… TRUE             375 bells              1500
+##  7     23 acid… Acid… Tops     TRUE             420 bells              1680
+##  8     24 acid… Acid… Bottoms  TRUE             330 bells              1320
+##  9     26 acnh… Acnh… Furnitu… TRUE            8990 bells             35960
+## 10     26 acnh… Acnh… Furnitu… TRUE            8990 bells             35960
+## # … with 4,555 more rows, and 8 more variables: buy_currency <chr>,
+## #   sources <chr>, customizable <lgl>, recipe <dbl>, recipe_id <chr>,
+## #   games_id <chr>, id_full <chr>, image_url <chr>
 ```
 
-## Including Plots
-
-You can also embed plots, for example:
-
-![](TidyTuesday-Projects_files/figure-html/pressure-1.png)<!-- -->
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
