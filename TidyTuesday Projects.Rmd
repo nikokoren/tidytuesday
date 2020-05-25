@@ -39,4 +39,14 @@ boston_cocktails <- boston_cocktails %>%
 #fviz_cluster(k2, data = boston_cocktails)
 
 ```
+```{r}
+favorite_ingredients <- boston_cocktails %>%
+  select(category, ingredient) %>%
+  group_by(category, ingredient) %>%
+  summarize(n = n()) %>%
+  top_n(10)%>%
+  ungroup()%>%
+  arrange(category, desc(n))
 
+
+```
