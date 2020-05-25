@@ -10,20 +10,33 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
-library("tidyverse")
+library(tidyverse)
+library(cluster)
+library(factoextra)
+library(stringr)
 
-# 2020-05_05
-# Animal Crossing Data
+# 2020-05_25
+# Cocktails
 
-critic <- readr::read_tsv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-05-05/critic.tsv')
-user_reviews <- readr::read_tsv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-05-05/user_reviews.tsv')
-items <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-05-05/items.csv')
-villagers <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-05-05/villagers.csv')
+boston_cocktails <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-05-26/boston_cocktails.csv')
+
 
 ```
 
 
 ```{r}
-items
+boston_cocktails <- boston_cocktails %>%
+  str_split(measure, " ", n = 2)
+
+#boston_wide <- scale(boston_wide)
+
+#distance <- get_dist(boston_cocktails)
+#distance_plot <- fviz_dist(distance, gradient = list(low = "#00AFBB", mid = "white", high = "#FC4E07"))
+
+#k2 <- kmeans(boston_cocktails, centers = 2, nstart = 25)
+#str(k2)
+
+#fviz_cluster(k2, data = boston_cocktails)
+
 ```
 
